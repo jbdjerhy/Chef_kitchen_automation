@@ -19,7 +19,7 @@ The deployment needs to follow the resource grouping matching the business needs
 B.	 Visual Representation:
  
  
- 
+ ![Picture25](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/0d75ecca-ce6a-44f3-acf1-349b0df6e443)
 
  
  
@@ -120,10 +120,11 @@ suites:
 A.	Screenshot showing that the automation script executes without errors (from part D):
  
  
+ ![Picture26](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/71d28868-6f9b-43c0-88c3-58b2a40431ab)
  
 
  
- 
+ ![Picture27](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/dc8ce923-0583-4f28-9ef1-829daf75e581)
  
  
 
@@ -145,6 +146,9 @@ Time to scale from 1 cluster to 200 clusters
  
 Kitchen Create	 
 
+![Picture28](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/35bd44d5-a02c-4788-9635-b266504dafdb)
+
+
  
 Time to register a cluster and then quench connections to the load balancer, taking the cluster off-line (start-up, operation, shutdown)
  	1 minute per connection quench, start of cluster launch, and part of time to scale cluster, can be tracked separately as a quench	 	 	 
@@ -158,6 +162,7 @@ Peak load averages per system at 200, and 300, satellites per cluster	60% of CPU
  
 Top	 
 
+![Picture29](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/b2eac562-0925-42c4-8126-8adbaa06ed1e)
  
 Write times to the diagnostic data drive
  
@@ -168,7 +173,7 @@ Write times to the diagnostic data drive
  
 dd if=/dev/zero of=/root/testfile bs=1G count=1 oflag=direct
  	 
-
+![Picture30](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/d56b0da6-6ba4-4e04-a83c-5be542e35564)
  
 Pull time from the game instances (1 Satellite Terminal Server, 1 Web Server, 1 Database, and 1 time server) and initialization time
  	Part of cluster launch 15–30 minutes	 
@@ -177,7 +182,7 @@ Pull time from the game instances (1 Satellite Terminal Server, 1 Web Server, 1 
  
 Kitchen Converge	 
 
- 
+![Picture31](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/d6458510-1260-44af-8602-3bf090be643f) 
 *Average messaging service (queue) time
  
  	<1 minute in queue	 
@@ -196,6 +201,7 @@ Rtt min/avg/max/mdev = 18.869/27.662/73.201/16.203 ms
  
 Ping wgu.ed	 
 
+![Picture32](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/f84bea36-b656-4382-9990-966f93e1da6c)
  
 Average latency of each cluster 
  
@@ -203,6 +209,7 @@ Average latency of each cluster
  
 Rtt min/avg/max/mdev =0.023/0.184/0.981/0.356 ms	Ping localhost from one of the created instances 	 
 
+![Picture33](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/bb6eda9c-d761-43ac-9b15-d18daa474ecb)
  
 Network data in and out for each cluster
  
@@ -210,6 +217,7 @@ Network data in and out for each cluster
  
 Rtt min/avg/max/mdev = 21.770/47.082/73.261/21.737	Ping to google.com from another instance 	 
 
+![Picture34](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/c88ac771-9a5e-4725-9745-e139
  
 Overall CPU utilization of the environment for each cluster
  	Not >60%	Given the current system load for 1 instance: 
@@ -217,13 +225,16 @@ Overall CPU utilization of the environment for each cluster
 0.0, 0.1, 0.5
  	Top 	 
 
- 
+ ![Picture36](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/cbdcd791-00e5-433d-9d8f-fd53bb96edb8)
+3772f38d)
+
 *Diagnostic data able to be written by the automation to the correct cloud bucket storage space	Show read/write times <1 second	 
  
  
  
 1073741824 bytes (1.1 GB) copied, 6.84678 s, 157 MB/s	Sudo dd if=/dev/zero of=testWriteSpeed.txt bs=1G count=1	 
 
+![Picture35](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/0b648bcf-cffe-4b0e-90a4-e01f4e8893a6)
  
 Scaled Satellite Cluster latency
  
@@ -231,19 +242,20 @@ Scaled Satellite Cluster latency
  
 Rtt min/avg/max/mdev = 21.770/47.082/73.261/21.737	Ping to google.com from another instance 	 
 
+![Picture37](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/aecd1a68-506a-47aa-983d-88613c904668)
  
 Scaled Satellite Cluster latency between gateway/scaled clusters and core
  
  	<30 milliseconds	Test ping to localhost
  
 Rtt min/avg/max/mdev =0.023/0.184/0.981/0.356 ms	Ping localhost from one of the created instances 	 
-
+![Picture38](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/b7d09de5-7427-482d-afc5-2d50b61e584c)
  
 Scaled Satellite Cluster latency between scaled clusters and environment 
  	<30 milliseconds	Test ping to Google.com 
  
 Rtt min/avg/max/mdev = 21.770/47.082/73.261/21.737	Ping to google.com from another instance 	 
-
+![Picture39](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/f5fd6d4d-5fa2-4882-b521-30d2baa727cf)
  
 Pull time from the game instances (1 Satellite Terminal Server, 1 Web Server, 1 Database, and 1 time server) and initialization time
  	Part of cluster launch 15–30 minutes	 
@@ -252,7 +264,7 @@ Pull time from the game instances (1 Satellite Terminal Server, 1 Web Server, 1 
  
 Kitchen Converge	 
 
- 
+ ![Picture40](https://github.com/jbdjerhy/Chef_kitchen_automation/assets/142699688/a49ffb33-ca80-499c-a8a8-c5a2d8892553)
  
  
  
